@@ -1,6 +1,7 @@
 package com.example.api.controllers;
 
 import com.example.api.domain.user.AuthenticationDTO;
+import com.example.api.domain.user.LoginResponseDTO;
 import com.example.api.domain.user.User;
 import com.example.api.domain.user.UserRegistrationDTO;
 import com.example.api.infra.security.TokenService;
@@ -49,6 +50,6 @@ public class AuthenticationController {
         var auth = this.authenticationManager.authenticate(usernamePassword);
 
         var token = this.tokenService.generateToken((User) auth.getPrincipal());
-        return  ResponseEntity.ok().body(token);
+        return  ResponseEntity.ok().body(new LoginResponseDTO(token));
     }
 }
