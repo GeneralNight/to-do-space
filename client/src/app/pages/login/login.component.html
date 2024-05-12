@@ -1,3 +1,29 @@
-<div class="flex flex-col w-screen h-screen ">
-    <p>login works!</p>
+<div class="flex items-center justify-center w-screen h-screen min-h-[720px] bg-white-snow">
+    <div class="w-full h-full bg-black flex flex-col items-center justify-center">
+        <img src="assets/imgs/logo.png" alt="" >
+    </div>
+    <div class="w-full h-full flex items-center justify-center py-16 px-6">
+        <div class="flex flex-col items-center rounded-lg px-16 py-8 min-w-[540px] gap-8">
+            <span class="text-2xl font-semibold ">Login</span>
+            <form class="flex flex-col gap-8 w-full">
+                <app-text-input [label]="'Email'"></app-text-input>
+                <div class="flex flex-col gap-4">
+                    <app-text-input [label]="'Senha'"></app-text-input>
+                    <div class="flex items-center justify-end">
+                        <button class="text-black-75 hover:text-[#0C1B54] transition-all duration-[.2s] font-semibold">Esqueci minha senha</button>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6 items-center">
+                    <button type="submit" class="w-full py-3 rounded-lg bg-black text-white text-center font-semibold text-lg">
+                        Entrar
+                    </button>
+                    <div class="flex gap-1">
+                        <span>Não tem uma conta ainda?</span>
+                        <button [routerLink]="'/register'" class="font-bold  hover:underline underline-offset-2">Registre-se</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </div>
