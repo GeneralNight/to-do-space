@@ -1,0 +1,33 @@
+<div class="flex items-center justify-center w-screen h-screen min-h-[720px] bg-white-snow">
+    <div class="w-full h-full bg-black flex flex-col items-center justify-center">
+        <img src="assets/imgs/logo.png" alt="" class="">
+    </div>
+    <div class="w-full h-full flex items-center justify-center py-16 px-6">
+        <div class="flex flex-col items-center rounded-lg px-16 py-8 min-w-[540px] gap-8">
+            <span class="text-2xl font-semibold ">Sign up</span>
+            <form class="flex flex-col gap-8 w-full">
+                <div class="flex items-start gap-8">
+                    <app-text-input [label]="'Nome'"></app-text-input>
+                    <app-text-input [label]="'Sobrenome'"></app-text-input>
+                </div>
+                <app-text-input [label]="'Email'"></app-text-input>
+                <div class="flex items-start gap-8">
+                    <app-text-input [label]="'Senha'"></app-text-input>
+                    <app-text-input [label]="'Confirme a senha'"></app-text-input>
+                </div>
+                
+                
+                <div class="flex flex-col gap-6 items-center">
+                    <button type="submit" class="w-full py-3 rounded-lg bg-black text-white text-center font-semibold text-lg">
+                        Criar conta
+                    </button>
+                    <div class="flex gap-1">
+                        <span>Já possui uma conta?</span>
+                        <button [routerLink]="'/login'" class="font-bold  hover:underline underline-offset-2">Entrar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
